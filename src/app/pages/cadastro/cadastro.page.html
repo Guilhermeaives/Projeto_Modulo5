@@ -1,0 +1,41 @@
+<ion-content >
+
+    <div class="header"></div>
+  
+    <div >
+      <ion-icon class="icon" name="people-outline"></ion-icon>
+        <!-- <img src="./assets/icon/login.png" alt="logo"> -->
+      </div>
+      <ion-card style="margin-top: 10%;" mode="ios">
+        
+          
+        
+        <form [formGroup]="authForm" (submit)="createUser()">
+
+          <ion-item lines="none">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-input type="text" placeholder="Coloque seu nome" ></ion-input>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-icon name="mail-outline" slot="start"></ion-icon>
+            <ion-input type="email" placeholder="meuemail@email.com" formControlName="email"></ion-input>
+          </ion-item>
+  
+          <ion-item lines="none">
+            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+            <ion-input type="password" placeholder="Informe a senha" formControlName="password"></ion-input>
+          </ion-item>
+          <ion-button type="submit" expand="block">Cadastrar</ion-button>
+          
+        </form>
+       
+      </ion-card> 
+  
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="primary" style="text-align: center; text-shadow: 0 0 1em;">
+      <ion-label > Conheça Nossos Produtos </ion-label>
+    </ion-toolbar>
+  </ion-footer>

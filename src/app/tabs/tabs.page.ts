@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FireAuthService } from '../services/fire-auth.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(private fireAuth: FireAuthService) {}
+
+  sair(){
+    this.fireAuth.logout();
+  }
 
 }

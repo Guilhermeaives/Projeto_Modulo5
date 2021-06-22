@@ -1,17 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="primary"> 
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button style="color: #fff;" value="doces">
+      <ion-label>Doces</ion-label>
+    </ion-segment-button >
+    <ion-segment-button value="salgados" style="color: #fff;">
+      <ion-label>Salgados</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="bolos" style="color: #fff;">
+      <ion-label>Bolos</ion-label>
+    </ion-segment-button>
+  </ion-segment>  
+
+  <!--<h2 id="container">Experimente Nossos Produtos!!!</h2> -->
+
+ 
 </ion-content>

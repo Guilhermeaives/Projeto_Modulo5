@@ -1,17 +1,51 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content mode="ios">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <form  [formGroup]="form" (submit)="cadastrar()">
+
+    <div
+      style="text-align: center; margin-top: 10px; margin-bottom: -1px; font-size: 15px; text-shadow:  0 0 1em #3dc2ff;">
+      <ion-label>Dados do Cliente </ion-label>
+    </div>
+
+    <ion-item>
+      <ion-label>Nome:</ion-label>
+      <ion-input type="text" placeholder="Digite seu nome!" formControlName="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input type="email" placeholder="digite seu email@xxxx.com" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Telefone:</ion-label>
+      <ion-input type="text" placeholder="(xx) xxxxx-xxxx" formControlName="telefone"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Celular:</ion-label>
+      <ion-input type="text" placeholder="(xx) xxxxx-xxxx" formControlName="celular"></ion-input>
+    </ion-item>
+
+    <div
+      style="text-align: center; margin-top: 10px; margin-bottom: -1px; font-size: 15px; text-shadow:  0 0 1em #3dc2ff;">
+      <ion-label>Dados do Pedido</ion-label>
+    </div>
+    
+    <ion-item>
+      <ion-label>Produtos</ion-label>
+      <ion-select multiple="true" formControlName="pedidos">
+        <ion-select-option *ngFor="let produto1 of produtosList" [value]="produto1">{{ produto1.titulo }}</ion-select-option>        
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Mensagem:</ion-label>
+      <ion-textarea type="text" formControlName="menssagem"></ion-textarea>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" shape="round" >Enviar</ion-button>
+  </form>
 </ion-content>
