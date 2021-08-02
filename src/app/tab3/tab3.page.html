@@ -46,6 +46,6 @@
       <ion-textarea type="text" formControlName="menssagem"></ion-textarea>
     </ion-item>
 
-    <ion-button type="submit" expand="block" shape="round" >Enviar</ion-button>
+    <ion-button type="submit" expand="block" shape="round" [disabled]="form.invalid" >Enviar</ion-button>
   </form>
 </ion-content>

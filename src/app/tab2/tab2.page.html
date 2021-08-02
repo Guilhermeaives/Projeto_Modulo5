@@ -5,7 +5,7 @@
 
     <ion-list>
       <ion-card style="border-radius: 30px;" *ngFor="let produto of produtosArray">
-        <ion-item lines="none" >
+        <ion-item lines="none" [routerLink]="['/produtos',produto.id]">
           <ion-thumbnail slot="end">
             <ion-img id="img" [src]="produto.endereco"></ion-img>
           </ion-thumbnail>

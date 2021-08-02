@@ -14,19 +14,24 @@ export class ProdutosService {
     private af: AngularFirestore
   ) {
     this.productCollection = this.af.collection<Produtos>('Produtos');
-   }
+  }
 
-   getAllProducts(){
-     return this.productCollection.snapshotChanges().pipe(
-      map (actions => {
+  //Metodo consulta um unico produto
+  getProdutos(id: string) {
+    return this.productCollection.doc(id).valueChanges();
+  }
+
+  getAllProducts() {
+    return this.productCollection.snapshotChanges().pipe(
+      map(actions => {
         return actions.map(a => {
           const data = a.payload.doc.data();
           const id = a.payload.doc.id;
-          return {id, ...data}
+          return { id, ...data }
         })
       })
-     )
-   }
+    )
+  }
 
 
 }

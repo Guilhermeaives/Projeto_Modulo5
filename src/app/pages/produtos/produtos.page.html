@@ -16,17 +16,25 @@
 
 <ion-content>
   <ion-card>
-    <img src="https://cdn.pixabay.com/photo/2015/09/11/22/15/cake-936498__480.jpg"
-      alt="">
-    <ion-card-header>
+    <img [src]="produto.endereco" alt="">
 
-      <ion-card-title>Bolo De Aipim com Coco</ion-card-title>
+    <ion-card-header>
+      <ion-card-title style="text-align: center; text-shadow: 0 0 1px;"><strong>{{produto.titulo}}</strong></ion-card-title>  
     </ion-card-header>
 
     <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+
+      <ion-label><strong>Sabor: </strong></ion-label>
+      <p>{{produto.sabor}}</p>
+      <ion-label><strong>Categoria: </strong></ion-label>
+      <p>{{produto.categoria}}</p>
+
+      <ion-label><strong>Descrição: </strong></ion-label>
+      <p>{{produto.descricao}}</p>
+
     </ion-card-content>
+
+
   </ion-card>
 
 </ion-content>
