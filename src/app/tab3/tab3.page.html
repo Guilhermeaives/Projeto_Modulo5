@@ -5,7 +5,7 @@
   <form  [formGroup]="form" (submit)="cadastrar()">
 
     <div
-      style="text-align: center; margin-top: 10px; margin-bottom: -1px; font-size: 15px; text-shadow:  0 0 1em #3dc2ff;">
+      style="text-align: center; margin-top: 40px; margin-bottom: -1px; font-size: 15px; text-shadow:  0 0 1em #3dc2ff;">
       <ion-label>Dados do Cliente </ion-label>
     </div>
 
@@ -37,7 +37,7 @@
     <ion-item>
       <ion-label>Produtos</ion-label>
       <ion-select multiple="true" formControlName="pedidos">
-        <ion-select-option *ngFor="let produto1 of produtosList" [value]="produto1">{{ produto1.titulo }}</ion-select-option>        
+        <ion-select-option *ngFor="let produto1 of produtosList" [value]="produto1">{{ produto1.title }}</ion-select-option>
       </ion-select>
     </ion-item>
 

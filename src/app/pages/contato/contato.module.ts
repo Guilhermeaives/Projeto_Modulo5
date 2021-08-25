@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FotosPageRoutingModule } from './fotos-routing.module';
+import { ContatoPageRoutingModule } from './contato-routing.module';
 
-import { FotosPage } from './fotos.page';
+import { ContatoPage } from './contato.page';
 import { HeaderModule } from 'src/app/componenetes/header/header.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { HeaderModule } from 'src/app/componenetes/header/header.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    FotosPageRoutingModule,
+    ContatoPageRoutingModule,
     HeaderModule
   ],
-  declarations: [FotosPage]
+  declarations: [ContatoPage]
 })
-export class FotosPageModule {}
+export class ContatoPageModule {}

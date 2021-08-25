@@ -33,7 +33,6 @@ export class PedidosService {
     return this.collectioPedidos.doc(id).valueChanges();
   }
 
-
   //metodo de cadastro
   addPedido(pedido) {
     return this.collectioPedidos.add(pedido);

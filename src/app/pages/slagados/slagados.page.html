@@ -1,32 +1,25 @@
 <ion-header [translucent]="true">
-  <ion-toolbar  color='primary' mode="ios">
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title >
-      BETH_ART_CANDY
+  <ion-toolbar  color='primary'>
+    <ion-buttons slot="start"><ion-back-button ></ion-back-button></ion-buttons>
+    <ion-title class="title" >
+      BETH ART CANDY
     </ion-title>    
   </ion-toolbar>
-  <ion-toolbar color='secondary' mode="ios">
-    <ion-title  color="primary " style="font-size: 12px; text-align: center;">
-     DOCES PERSONALIZADOS
+  <ion-toolbar color='secondary'>
+    <ion-title class="subtitle">
+     Doces Personalizados!
     </ion-title> 
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-card>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgm--Np1ge0fZA5IOliuSh5syH280rTSVccA&usqp=CAU"      alt="">
-    <ion-card-header>
-
-      <ion-card-title>ESfiras de frango</ion-card-title>
-    </ion-card-header>
-
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let produto of produtos" size="6">
+        <img [src]="produto.url" [alt]="produto.title">
+      </ion-col>      
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
 

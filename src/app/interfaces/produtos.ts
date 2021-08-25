@@ -1,7 +1,7 @@
 export interface Produtos {
-    titulo?: string,
-    categoria?: string,
-    sabor?: string,
-    tamanho?: string,
+    title?: string,   
+    category?: string,
+    url?: string,
+    descricao?: string,
     id?: string
 }

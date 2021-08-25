@@ -1,15 +1,15 @@
 <app-header></app-header>
 
 
- <ion-content [fullscreen]="true">
+ <ion-content [fullscreen]="true" >
 
-    <ion-list>
+    <ion-list color="primary">
       <ion-card style="border-radius: 30px;" *ngFor="let produto of produtosArray">
-        <ion-item lines="none" [routerLink]="['/produtos',produto.id]">
+        <ion-item lines="none" [routerLink]="['/produtos',produto.id]" >
           <ion-thumbnail slot="end">
-            <ion-img id="img" [src]="produto.endereco"></ion-img>
+            <ion-img id="img" [src]="produto.url"></ion-img>
           </ion-thumbnail>
-          <ion-label>{{produto.titulo}}</ion-label>
+          <ion-label>{{produto.title}}</ion-label>
         </ion-item>
       </ion-card>
     </ion-list>  
