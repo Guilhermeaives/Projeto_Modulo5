@@ -1,0 +1,24 @@
+h5{
+    font-size: 30px;
+    text-align: center;
+    color: #2d3436;   
+    margin-top: 1px;
+}
+
+
+div{
+    background-color: #a29bfe;
+    margin: 10px;
+    padding: 20px;
+    border: 0.5px solid #a29bfe;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px ;
+}
+
+div:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);   
+}

@@ -12,7 +12,7 @@ const routes: Routes = [
         loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
       },
       {
-        path: 'tab2',
+        path: 'tab2/:id',
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
       {
@@ -22,6 +22,11 @@ const routes: Routes = [
       {
         path: 'contato',
         loadChildren: () => import('../pages/contato/contato.module').then( m => m.ContatoPageModule)
+      },
+
+      {
+        path: 'categorias',
+        loadChildren: () => import('../pages/categorias/categorias.module').then( m => m.CategoriasPageModule)
       },
       {
         path: '',

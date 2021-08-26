@@ -2,9 +2,24 @@
 
 
  <ion-content [fullscreen]="true" >
+    <ion-list >
+      <ion-card style="border-radius: 30px;" *ngFor="let produto of produtosArray.slice(0, 4)">
+        <ion-item lines="none" [routerLink]="['/produtos',produto.id]" >
+          <ion-thumbnail slot="end">
+            <ion-img id="img" [src]="produto.url"></ion-img>
+          </ion-thumbnail>
+          <ion-label>{{produto.title}}</ion-label>
+        </ion-item>
+      </ion-card>
+    </ion-list>
 
-    <ion-list color="primary">
-      <ion-card style="border-radius: 30px;" *ngFor="let produto of produtosArray">
+    <ion-button (click)="view()" expand="block" fill="clear">
+      <ion-icon  *ngIf=" !mais" name="arrow-down-outline"></ion-icon>
+      <ion-icon  *ngIf="mais" name="arrow-up-outline"></ion-icon>
+    </ion-button>
+
+    <ion-list *ngIf="mais" >
+      <ion-card style="border-radius: 30px;" *ngFor="let produto of produtosArray.slice(5)">
         <ion-item lines="none" [routerLink]="['/produtos',produto.id]" >
           <ion-thumbnail slot="end">
             <ion-img id="img" [src]="produto.url"></ion-img>
@@ -13,5 +28,4 @@
         </ion-item>
       </ion-card>
     </ion-list>  
-
   </ion-content>
