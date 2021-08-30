@@ -1,5 +1,7 @@
 {
   "name": "Beth_Art_Candy",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

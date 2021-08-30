@@ -10,8 +10,7 @@ import { ProdutosService } from '../services/produtos.service';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page implements OnInit {
-  produtosArray = [];
-  mais: boolean;
+  produtosArray = []; 
   idRoute = null;
 
   constructor(
@@ -77,11 +76,7 @@ export class Tab2Page implements OnInit {
       });
     }
 
-  }
-
-  view(){
-    this.mais = !this.mais;
-  }
+  } 
 
 }
 
